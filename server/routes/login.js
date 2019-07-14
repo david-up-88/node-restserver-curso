@@ -17,7 +17,6 @@ app.post('/login', (req, res) => {
                 err
             });
         }
-
         if(!usuarioDB){
             return res.status(400).json({
                 ok: false,
@@ -47,7 +46,6 @@ app.post('/login', (req, res) => {
         });
     });
 });
-
 // Configuraciones de Google
 async function verify(token) {
     const ticket = await client.verifyIdToken({
